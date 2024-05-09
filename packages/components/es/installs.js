@@ -1,5 +1,6 @@
 import { GieInput as t } from "./Input/index.js";
-const s = [t];
+import { GieEleInput as o } from "./EleInput/index.js";
+const p = [t, o];
 export {
-  s as default
+  p as default
 };

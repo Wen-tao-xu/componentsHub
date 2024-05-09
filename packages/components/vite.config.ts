@@ -2,13 +2,15 @@ import { defineConfig } from 'vite';
 import type { UserConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import dts from 'vite-plugin-dts';
+import ElementPlus from 'unplugin-element-plus/vite';
 
 export default defineConfig(() => {
     return {
         build: {
             rollupOptions: {
                 // 将vue模块排除在打包文件之外，使用用这个组件库的项目的vue模块
-                external: ['vue'],
+                // 排除掉 scss是因为要在组件中引入element-plus的样式，但是这个样式也要从外部项目的element-plus依赖中获取
+                external: ['vue', 'element-plus', '@element-plus/icons-vue', /\.scss/],
 
                 // 输出配置
                 output: [
@@ -54,6 +56,10 @@ export default defineConfig(() => {
                 staticImport: true,
                 // 将所有的类型合并到一个文件中
                 rollupTypes: true,
+            }),
+            ElementPlus({
+                // 导入scss而不是css
+                useSource: true,
             }),
         ],
     } as UserConfig;

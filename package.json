@@ -6,11 +6,13 @@
   "scripts": {
     "dev": "vite",
     "preview": "vite preview",
-    "build": "pnpm --filter=@giegie/* run build"
+    "build:lib": "pnpm --filter=@giegie/* run build",
+    "build": "vue-tsc && vite build"
   },
   "dependencies": {
     "@giegie/components": "workspace:*",
     "@giegie/resolver": "workspace:*",
+    "element-plus": "^2.7.2",
     "vue": "^3.4.21"
   },
   "devDependencies": {

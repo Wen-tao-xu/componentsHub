@@ -19,11 +19,15 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "peerDependencies": {
+    "element-plus": "^2.7.2"
+  },
   "devDependencies": {
     "gulp": "^5.0.0",
     "gulp-autoprefixer": "^9.0.0",
     "gulp-sass": "^5.1.0",
     "sass": "^1.77.0",
-    "shelljs": "^0.8.5"
+    "shelljs": "^0.8.5",
+    "unplugin-element-plus": "^0.8.0"
   }
 }
