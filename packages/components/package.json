@@ -1,0 +1,29 @@
+{
+  "name": "@giegie/components",
+  "version": "0.0.1",
+  "description": "练习了2年半的高性能组件库",
+  "main": "lib",
+  "private": false,
+  "module": "es",
+  "type": "module",
+  "types": "types/index.d.ts",
+  "files": [
+    "es",
+    "lib",
+    "types",
+    "global.d.ts"
+  ],
+  "scripts": {
+    "build": "gulp -f build/gulpfile.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^5.0.0",
+    "gulp-autoprefixer": "^9.0.0",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.77.0",
+    "shelljs": "^0.8.5"
+  }
+}
