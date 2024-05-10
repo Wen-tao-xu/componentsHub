@@ -26,10 +26,17 @@ node: v18.17.1
 pnpm: 9.1.0
 
 私有npm服务器地址： http://39.96.0.194:4873/
+
+# changelog管理发布版本
+选择要发布的包 `pnpm changeset add`
+npm版本号修改 `pnpm changeset version` 
+
 发布组件步骤：
 1.新建 `.npmrc`文件,文件内容
 ```
 registry = http://39.96.0.194:4873/
 ```
+
 2.npm login
+
 3.pnpm publish -r 

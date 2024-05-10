@@ -11,10 +11,15 @@
     "es",
     "lib",
     "types",
-    "global.d.ts"
+    "global.d.ts",
+    "README.md"
   ],
   "scripts": {
     "build": "gulp -f build/gulpfile.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lz-allen/componentsHub.git"
   },
   "keywords": [],
   "author": "",
