@@ -1,1 +1,1 @@
-"use strict";const e=require("./Input/index.js"),t=require("./EleInput/index.js"),i=[e.GieInput,t.GieEleInput];module.exports=i;
+"use strict";const e=require("./Input/index.js"),t=require("./EleInput/index.js");require("./EleRichText/index.js");const i=require("./EleRichText/EleRichText.vue.js"),r=[e.GieInput,t.GieEleInput,i];module.exports=r;

@@ -1,10 +1,12 @@
-import { makeInstaller as t } from "./utils/install.js";
-import e from "./installs.js";
+import { makeInstaller as e } from "./utils/install.js";
+import t from "./installs.js";
 import { GieInput as l } from "./Input/index.js";
-import { GieEleInput as a } from "./EleInput/index.js";
-const m = t([...e]);
+import { GieEleInput as n } from "./EleInput/index.js";
+import { GieEleRichText as a } from "./EleRichText/index.js";
+const i = e([...t]);
 export {
-  a as GieEleInput,
+  n as GieEleInput,
+  a as GieEleRichText,
   l as GieInput,
-  m as default
+  i as default
 };

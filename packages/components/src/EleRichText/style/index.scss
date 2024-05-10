@@ -1,0 +1,13 @@
+.gie-input-rich-text {
+    width: 100%;
+    min-height: 150px;
+    color: darksalmon;
+    border: 1px solid var(--el-border-color);
+    border-radius: 5px;
+    text-align: left;
+}
+.el-form-item.is-error {
+    .gie-input-rich-text {
+        box-shadow: 0 0 0 1px var(--el-color-danger) inset;
+    }
+}

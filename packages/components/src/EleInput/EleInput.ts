@@ -6,6 +6,7 @@ import EleInput from './EleInput.vue'
 export interface EleInputProps {
     modelValue: string;
     disabled?: boolean;
+    isShowP?:boolean;
 }
 
 /**

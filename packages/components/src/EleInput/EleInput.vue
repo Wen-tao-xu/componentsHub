@@ -1,7 +1,7 @@
 <template>
     <div class="gie-ele-input">
-        <p class="gie-ele-p">state: {{ state }}</p>
-        <el-input v-model="state" ref="inputRef" type="text" :disabled="props.disabled" />
+        <p class="gie-ele-p" v-if="props.isShowP">state: {{ state }}</p>
+        <el-input v-model="state" ref="inputRef" v-bind="$attrs" type="text" :disabled="props.disabled" />
     </div>
 </template>
 <script setup lang="ts">
@@ -18,6 +18,7 @@
     const props = withDefaults(defineProps<EleInputProps>(), {
         modelValue: '',
         disabled: false,
+        isShowP: true,
     });
 
     const state = computed({

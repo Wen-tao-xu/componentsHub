@@ -6,5 +6,6 @@
 export {}
 declare global {
   const GieEleInput: typeof import('@giegie/components')['GieEleInput']
+  const GieEleRichText: typeof import('@giegie/components')['GieEleRichText']
   const GieInput: typeof import('@giegie/components')['GieInput']
 }

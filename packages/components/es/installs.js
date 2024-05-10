@@ -1,6 +1,8 @@
 import { GieInput as t } from "./Input/index.js";
 import { GieEleInput as o } from "./EleInput/index.js";
-const p = [t, o];
+import "./EleRichText/index.js";
+import i from "./EleRichText/EleRichText.vue.js";
+const f = [t, o, i];
 export {
-  p as default
+  f as default
 };

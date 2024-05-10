@@ -7,8 +7,15 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    ElButton: typeof import('element-plus/es')['ElButton']
+    ElDivider: typeof import('element-plus/es')['ElDivider']
+    ElForm: typeof import('element-plus/es')['ElForm']
+    ElFormItem: typeof import('element-plus/es')['ElFormItem']
+    ElInput: typeof import('element-plus/es')['ElInput']
     GieEleInput: typeof import('@giegie/components')['GieEleInput']
+    GieEleRichText: typeof import('@giegie/components')['GieEleRichText']
     GieInput: typeof import('@giegie/components')['GieInput']
+    GieRichText: typeof import('@giegie/components')['GieRichText']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
   }
 }

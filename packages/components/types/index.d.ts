@@ -10,11 +10,17 @@ declare type __VLS_NonUndefinedable<T> = T extends undefined ? never : T;
 
 declare type __VLS_NonUndefinedable_2<T> = T extends undefined ? never : T;
 
+declare type __VLS_NonUndefinedable_3<T> = T extends undefined ? never : T;
+
 declare type __VLS_Prettify<T> = {
     [K in keyof T]: T[K];
 } & {};
 
 declare type __VLS_Prettify_2<T> = {
+    [K in keyof T]: T[K];
+} & {};
+
+declare type __VLS_Prettify_3<T> = {
     [K in keyof T]: T[K];
 } & {};
 
@@ -36,6 +42,15 @@ declare type __VLS_TypePropsToRuntimeProps_2<T> = {
     };
 };
 
+declare type __VLS_TypePropsToRuntimeProps_3<T> = {
+    [K in keyof T]-?: {} extends Pick<T, K> ? {
+        type: PropType<__VLS_NonUndefinedable_3<T[K]>>;
+    } : {
+        type: PropType<T[K]>;
+        required: true;
+    };
+};
+
 declare type __VLS_WithDefaults<P, D> = {
     [K in keyof Pick<P, keyof P>]: K extends keyof D ? __VLS_Prettify<P[K] & {
         default: D[K];
@@ -44,6 +59,12 @@ declare type __VLS_WithDefaults<P, D> = {
 
 declare type __VLS_WithDefaults_2<P, D> = {
     [K in keyof Pick<P, keyof P>]: K extends keyof D ? __VLS_Prettify_2<P[K] & {
+        default: D[K];
+    }> : P[K];
+};
+
+declare type __VLS_WithDefaults_3<P, D> = {
+    [K in keyof Pick<P, keyof P>]: K extends keyof D ? __VLS_Prettify_3<P[K] & {
         default: D[K];
     }> : P[K];
 };
@@ -73,6 +94,7 @@ declare const _default_2: DefineComponent<__VLS_WithDefaults<__VLS_TypePropsToRu
 declare const _default_3: DefineComponent<__VLS_WithDefaults_2<__VLS_TypePropsToRuntimeProps_2<EleInputProps>, {
     modelValue: string;
     disabled: boolean;
+    isShowP: boolean;
 }>, {
     focus: typeof focus_3;
 }, unknown, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
@@ -80,11 +102,25 @@ declare const _default_3: DefineComponent<__VLS_WithDefaults_2<__VLS_TypePropsTo
 }, string, PublicProps, Readonly< ExtractPropTypes<__VLS_WithDefaults_2<__VLS_TypePropsToRuntimeProps_2<EleInputProps>, {
     modelValue: string;
     disabled: boolean;
+    isShowP: boolean;
 }>>> & {
     "onUpdate:modelValue"?: ((value: string) => any) | undefined;
 }, {
     modelValue: string;
     disabled: boolean;
+    isShowP: boolean;
+}, {}>;
+
+declare const _default_4: DefineComponent<__VLS_WithDefaults_3<__VLS_TypePropsToRuntimeProps_3<EleRichTextProps>, {
+    modelValue: string;
+}>, {}, unknown, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
+    "update:modelValue": (value: string) => void;
+}, string, PublicProps, Readonly< ExtractPropTypes<__VLS_WithDefaults_3<__VLS_TypePropsToRuntimeProps_3<EleRichTextProps>, {
+    modelValue: string;
+}>>> & {
+    "onUpdate:modelValue"?: ((value: string) => any) | undefined;
+}, {
+    modelValue: string;
 }, {}>;
 
 /**
@@ -105,6 +141,26 @@ export declare type EleInputInstance = InstanceType<typeof _default_3>;
 export declare interface EleInputProps {
     modelValue: string;
     disabled?: boolean;
+    isShowP?: boolean;
+}
+
+/**
+ * 定义emit类型
+ */
+export declare type EleRichTextEmits = {
+    'update:modelValue': [value: string];
+};
+
+/**
+ * 定义instance类型
+ */
+export declare type EleRichTextInstance = InstanceType<typeof _default_4>;
+
+/**
+ * 定义props类型
+ */
+export declare interface EleRichTextProps {
+    modelValue: string;
 }
 
 declare function focus_2(): void;
@@ -118,6 +174,10 @@ export declare const GieEleInput: SFCWithInstall<DefineComponent<{
         default: string;
     };
     disabled: {
+        type: PropType<boolean>;
+        default: boolean;
+    };
+    isShowP: {
         type: PropType<boolean>;
         default: boolean;
     };
@@ -135,11 +195,36 @@ export declare const GieEleInput: SFCWithInstall<DefineComponent<{
         type: PropType<boolean>;
         default: boolean;
     };
+    isShowP: {
+        type: PropType<boolean>;
+        default: boolean;
+    };
 }>> & {
     "onUpdate:modelValue"?: ((value: string) => any) | undefined;
 }, {
     modelValue: string;
     disabled: boolean;
+    isShowP: boolean;
+}, {}>> & Record<string, any>;
+
+export declare const GieEleRichText: SFCWithInstall<DefineComponent<{
+    modelValue: {
+        type: PropType<string>;
+        required: true;
+        default: string;
+    };
+}, {}, unknown, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
+    "update:modelValue": (value: string) => void;
+}, string, PublicProps, Readonly< ExtractPropTypes<{
+    modelValue: {
+        type: PropType<string>;
+        required: true;
+        default: string;
+    };
+}>> & {
+    "onUpdate:modelValue"?: ((value: string) => any) | undefined;
+}, {
+    modelValue: string;
 }, {}>> & Record<string, any>;
 
 export declare const GieInput: SFCWithInstall<DefineComponent<{
