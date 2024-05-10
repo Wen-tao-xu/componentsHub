@@ -24,3 +24,12 @@ build:lib 构建组件库
 
 node: v18.17.1
 pnpm: 9.1.0
+
+私有npm服务器地址： http://39.96.0.194:4873/
+发布组件步骤：
+1.新建 `.npmrc`文件,文件内容
+```
+registry = http://39.96.0.194:4873/
+```
+2.npm login
+3.pnpm publish -r 
