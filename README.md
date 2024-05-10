@@ -1,9 +1,26 @@
-# Vue 3 + TypeScript + Vite
+# Vue 3 + TypeScript + Vite 组件库 + monorepo
+组件支撑单个导出，整体导出、单个导出直接使用，无需引入，自动引入样式、自动注册组件
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+# Input组件
+原生组件
 
-## Recommended Setup
+# EleInput组件
+饿了么二次封装组件，依赖宿主环境安装的elementPlus
 
-- [VS Code](https://code.visualstudio.com/) + [Vue - Official](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (previously Volar) and disable Vetur
+# EleRichText组件
+自定义表单组件
 
-- Use [vue-tsc](https://github.com/vuejs/language-tools/tree/master/packages/tsc) for performing the same type checking from the command line, or for generating d.ts files for SFCs.
+# 脚本
+dev 组件库开发环境
+build:lib 构建组件库
+```
+  "scripts": {
+    "dev": "vite",
+    "preview": "vite preview",
+    "build:lib": "pnpm --filter=@giegie/* run build",
+    "build": "vue-tsc && vite build"
+  }
+```
+
+node: v18.17.1
+pnpm: 9.1.0
